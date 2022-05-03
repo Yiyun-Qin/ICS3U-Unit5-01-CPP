@@ -21,10 +21,12 @@ void fahrenheit() {
     // process
     std::cout << "" << std::endl;
     try {
-        temperatureCelsiusFloat = std::stof (temperatureCelsiusString);
+        temperatureCelsiusFloat = std::stof(temperatureCelsiusString);
         temperatureFahrenheit = (9.00 / 5) * temperatureCelsiusFloat + 32;
-        std::cout << std::fixed << std::setprecision(2) << std::setfill('0') << temperatureCelsiusFloat << "°C is equal to "
-        << std::fixed << std::setprecision(2) << std::setfill('0') << temperatureFahrenheit << "°F." << std::endl;
+        std::cout << std::fixed << std::setprecision(2) << std::setfill('0')
+        << temperatureCelsiusFloat << "°C is equal to " << std::fixed
+        << std::setprecision(2) << std::setfill('0') << temperatureFahrenheit
+        << "°F." << std::endl;
     } catch (std::invalid_argument) {
         std::cout << "Invalid number!" << std::endl;
     }
